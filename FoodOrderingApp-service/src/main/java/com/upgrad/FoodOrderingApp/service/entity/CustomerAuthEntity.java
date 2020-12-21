@@ -9,6 +9,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
+import java.time.chrono.ChronoZonedDateTime;
 
 @Entity
 @Table(name = "customer_auth")
@@ -20,13 +22,13 @@ import java.time.LocalDateTime;
 public class CustomerAuthEntity implements Serializable {
 
   @Column(name = "login_at")
-  LocalDateTime loginAt;
+  ZonedDateTime loginAt;
 
   @Column(name = "logout_at")
-  LocalDateTime logoutAt;
+  ZonedDateTime logoutAt;
 
   @Column(name = "expires_at")
-  LocalDateTime expiresAt;
+  ZonedDateTime expiresAt;
 
   @Id
   @Column(name = "id")
@@ -92,27 +94,26 @@ public class CustomerAuthEntity implements Serializable {
     this.accessToken = accessToken;
   }
 
-  public LocalDateTime getLoginAt() {
+  public ZonedDateTime getLoginAt() {
     return loginAt;
   }
 
-  public void setLoginAt(LocalDateTime loginAt) {
+  public void setLoginAt(ZonedDateTime loginAt) {
     this.loginAt = loginAt;
   }
 
-  public LocalDateTime getLogoutAt() {
+  public ZonedDateTime getLogoutAt() {
     return logoutAt;
   }
 
-  public void setLogoutAt(LocalDateTime logoutAt) {
+  public void setLogoutAt(ZonedDateTime logoutAt) {
     this.logoutAt = logoutAt;
   }
-
-  public LocalDateTime getExpiresAt() {
+  public ZonedDateTime getExpiresAt() {
     return expiresAt;
   }
 
-  public void setExpiresAt(LocalDateTime expiresAt) {
+  public void setExpiresAt(ZonedDateTime expiresAt) {
     this.expiresAt = expiresAt;
   }
 
