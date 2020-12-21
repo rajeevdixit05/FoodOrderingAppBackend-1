@@ -1,4 +1,4 @@
-package com.upgrad.FoodOrderingApp.service.businness;
+package com.upgrad.FoodOrderingApp.service.business;
 
 
 import org.springframework.stereotype.Component;
